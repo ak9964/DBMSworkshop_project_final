@@ -1,0 +1,35 @@
+<html>	
+<title> Ship - Sailer Reservation Form </title>					
+<body>
+<h1> Ship - Sailer Reservation Form </h1>
+<FORM ACTION="reserve.php">
+  <p>
+    Ship ID*:<select name="shid">
+       <option></option>
+		<?php
+		$sQuery1="SELECT shid FROM ship";
+		$oResult = mysql_query($sQuery1);           
+		  while ($arr=mysql_fetch_row($oResult))
+		   {
+		   echo"<option>$arr[0]</option>";
+		   }
+		?>
+		</select> <BR>
+    Sailer ID*:
+	<select name="sid">
+       <option></option>
+		<?php
+		$sQuery1="SELECT shid FROM sailer";
+		$oResult = mysql_query($sQuery1);           
+		  while ($arr=mysql_fetch_row($oResult))
+		   {
+		   echo"<option>$arr[0]</option>";
+		   }
+		?>
+	</select> <BR>
+    Reservation Date*:<INPUT TYPE=date NAME="rdate" value="" required><BR>
+  </p>
+    <INPUT TYPE=submit><br />
+</FORM>
+</body>
+</html>

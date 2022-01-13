@@ -1,0 +1,20 @@
+create table sailer(sid varchar(5) NOT NULL , name varchar(10) NOT NULL , 
+                    city varchar(10) NOT NULL , PRIMARY KEY (sid));
+
+create table ship(shid varchar(5) NOT NULL , shname varchar(10) NOT NULL , 
+                  shcapacity int(3) NOT NULL, PRIMARY KEY (shid));
+
+CREATE TABLE reserv(sid VARCHAR( 5 ) NOT NULL ,
+                    shid VARCHAR( 5 ) NOT NULL , rdate DATE NOT NULL, 
+                    PRIMARY KEY(sid, shid));
+
+insert into sailer values('1001', 'GTR', 'Mangalore');
+insert into sailer values('1002', 'MKV', 'Chennai');
+
+
+insert into ship values('101', 'SeaKing', 1200);
+insert into ship values('102', 'SpeedFish', 1000);
+insert into ship values('103', 'Bullet', 500);
+insert into ship values('104', 'Shark-1', 500);
+insert into ship values('105', 'Shark-2', 500);
+insert into ship values('106', 'KingFish', 1200);
